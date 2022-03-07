@@ -1,16 +1,18 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <%= render "layouts/head" %>
-  </head>
+<% cache_if false == true do %>
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <%= render "layouts/head" %>
+    </head>
 
-  <header>
-    <%= render "shared/nav_bar" %>
-  </header>
+    <header>
+      <%= render "shared/nav_bar" %>
+    </header>
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
-    </main>
-  </body>
-</html>
+    <body>
+      <main class="container mx-auto mt-28 px-5 flex">
+        <%= yield %>
+      </main>
+    </body>
+  </html>
+<% end %>
