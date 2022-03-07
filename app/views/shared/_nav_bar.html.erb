@@ -1,0 +1,28 @@
+<nav class="bg-white shadow-lg">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex justify-between">
+      <div class="flex space-x-7">
+        <div>
+          <%= link_to root_path do %>
+              <span class="flex items-center py-4 px-2">
+                <%= render "shared/rails_logo" if default_application? %>
+                <%= render "shared/vue_logo" if vue_application? %>
+                <%= render "shared/react_logo" if react_application? %>
+              </span>
+          <% end %>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <%= link_to "Home", root_path, class:"py-4 px-2 text-gray-500 font-semibold hover:scale-110 hover:text-gray-700  transition duration-300" %>
+
+          <%= link_to "About", pages_about_path, class:"py-4 px-2 text-gray-500 font-semibold hover:scale-110 hover:text-gray-700  transition duration-300" %>
+
+          <%= link_to "Posts", posts_path, class:"py-4 px-2 text-gray-500 font-semibold hover:scale-110 hover:text-gray-700 transition duration-300" %>
+
+          <%= link_to "Posts (React)", react_posts_path, class:"py-4 px-2 text-gray-500 font-semibold hover:scale-110 hover:text-teal-400 transition duration-300" %>
+
+          <%= link_to "Posts (Vue)", vue_posts_path, class:"py-4 px-2 text-gray-500 font-semibold hover:scale-110 hover:text-green-500 transition duration-300" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
