@@ -1,9 +1,4 @@
 <% if vue_application? %>
-  <% content_for :head do %>
-    <%= javascript_import_module_tag "vue_components/first_vue_component" %>
-    <%= javascript_import_module_tag "vue_components/second_vue_component" %>
-  <% end %>
-
   <div class="w-full">
     <%= render "first_vue_component"%>
     <%= render "second_vue_component"%>
@@ -11,13 +6,10 @@
 <% end %>
 
 <% if react_application? %>
-  <% content_for :head do %>
-    <%= javascript_import_module_tag "react_components/first_react_component" %>
-    <%= javascript_import_module_tag "react_components/second_react_component" %>
-  <% end %>
-
-  <div id="root"></div>
-  <div id="root2"></div>
+  <div class="w-full">
+    <%= render "first_react_component"%>
+    <%= render "second_react_component"%>
+  </div>
 <% end %>
 
 <div class="w-full">
