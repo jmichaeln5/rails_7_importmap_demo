@@ -11,6 +11,7 @@ pin_all_from "app/javascript/controllers", under: "controllers"
 pin "vue", to: "https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.esm.browser.js"
 pin "vue_components/first_vue_component"
 pin "vue_components/second_vue_component"
+pin "vue_components/third_vue_component"
 
 ################ React
 pin "htm", to: "https://ga.jspm.io/npm:htm@3.1.0/dist/htm.module.js"

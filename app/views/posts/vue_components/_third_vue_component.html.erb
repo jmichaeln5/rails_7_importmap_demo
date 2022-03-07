@@ -1,0 +1,27 @@
+<% content_for :head do %>
+  <script type="text/javascript">
+  let posts = <%= @posts.to_json.html_safe %>;
+  </script>
+  <%= javascript_import_module_tag "vue_components/third_vue_component" %>
+<% end %>
+
+<div class="p-4">
+  <div class="border">
+    <div class="p-2">
+      <div class="text-grey-600">
+        <h1 class="font-semi-bold text-3xl border-b">
+          Third Vue - for loop through todos
+        </h1>
+        <div id="app-3" class="py-4 text-2xl mt-2">
+          <ol>
+            <li v-for="post in posts">
+              <span class="text-2xl">
+                {{ post }}
+              </span>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
