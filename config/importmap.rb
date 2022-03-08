@@ -20,7 +20,9 @@ pin "react", to: "https://ga.jspm.io/npm:react@17.0.2/index.js"
 pin "react-dom", to: "https://ga.jspm.io/npm:react-dom@17.0.2/index.js"
 pin "object-assign", to: "https://ga.jspm.io/npm:object-assign@4.1.1/index.js"
 pin "scheduler", to: "https://ga.jspm.io/npm:scheduler@0.20.2/index.js"
+
 ################ First React Components
+### Example of pinning individual files
 pin "react_components/htm_create_element"
 pin "react_components/first_react_component"
 pin "react_components/second_react_component"
@@ -28,7 +30,10 @@ pin "react_components/third_react_component"
 pin "react_components/react_posts"
 
 ################ React Examples
-pin "react_examples/props"
-pin "react_examples/state_and_lifecycle"
+### Example of pinning all files from a directory with a namespace
+pin_all_from "app/javascript/react", under: "react"
+
+# pin "react_examples/props"
+# pin "react_examples/state_and_lifecycle"
 
 ################
