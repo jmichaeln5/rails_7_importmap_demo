@@ -1,6 +1,6 @@
-// Before HTM Conversion
-// Before HTM Conversion
-// Before HTM Conversion
+// Before HTM Conversion (JSX)
+// Before HTM Conversion (JSX)
+// Before HTM Conversion (JSX)
 
 // class Clock extends React.Component {
 //   constructor(props) {
@@ -46,7 +46,6 @@
 // After HTM Conversion
 
 import { html, Component, render } from 'https://unpkg.com/htm/preact/standalone.module.js';
-
 
 class Clock extends Component {
   constructor(props) {

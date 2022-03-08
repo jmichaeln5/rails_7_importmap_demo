@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   resources :posts
 
-  resources :react_posts, module: :posts
-  resources :vue_posts, module: :posts
+  get 'vue_posts', to: 'posts#vue_posts'
+  get 'react_posts', to: 'posts#react_posts'
+
+  get 'react/index'
+  get 'vue/index'
 end

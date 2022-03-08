@@ -1,0 +1,10 @@
+<script type="text/javascript">
+  let posts = <%= @posts.to_json.html_safe %>;
+  let postsLength = <%= @posts.size %>
+</script>
+
+<% content_for :head do %>
+  <%= javascript_import_module_tag "react_components/react_posts" %>
+<% end %>
+
+<div id="reactPosts"></div>

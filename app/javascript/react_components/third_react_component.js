@@ -69,6 +69,8 @@ const Header = ({ name }) => html`<h1>${name} List</h1>`
 const Footer = props => html`<footer ...${props} />`
 
 render(
-  html`<${App} page="All" />`,
+  html`
+  <${App} page="All" />
+  `,
   document.getElementById('thirdReactComponent')
 );

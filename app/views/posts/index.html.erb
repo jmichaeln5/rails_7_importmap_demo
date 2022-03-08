@@ -1,33 +1,25 @@
-<script type="text/javascript">
-let posts = <%= @posts.to_json.html_safe %>;
-let postsLength = <%= @posts.size %>
-</script>
-
-
-<% if vue_application? %>
-  <div class="w-full">
-    <%= render "posts/vue_components/first_vue_component"%>
-    <%= render "posts/vue_components/second_vue_component"%>
-    <%= render "posts/vue_components/third_vue_component"%>
-  </div>
-<% end %>
-
-<% if react_application? %>
-  <div class="w-full">
-    <%= render "posts/react_components/first_react_component"%>
-    <%= render "posts/react_components/second_react_component"%>
-    <%= render "posts/react_components/third_react_component"%>
-  </div>
-<% end %>
-
 <% if (react_application? == false ) and (vue_application? == false ) %>
+
 <div class="w-full">
   <% if notice.present? %>
     <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
   <% end %>
 
   <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Posts</h1>
+    <h1 class="grid grid-rows-3 font-bold text-4xl">
+      <div>
+        Posts
+      </div>
+
+      <div>
+        <%= link_to "React Posts", react_posts_path, class:"text-cyan-400 hover:scale-150 hover:text-cyan-500 transition duration-300" %>
+      </div>
+
+      <div>
+        <%= link_to "Vue Posts", vue_posts_path, class:"text-emerald-400 hover:scale-150 hover:text-emerald-500 transition duration-300" %>
+      </div>
+    </h1>
+
     <%= link_to 'New post', new_post_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
   </div>
 

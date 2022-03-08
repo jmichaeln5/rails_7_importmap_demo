@@ -6,6 +6,16 @@ class PostsController < ApplicationController
     @posts = Post.all.reverse
   end
 
+  def vue_posts
+    @vue_application = true
+    @posts = Post.all.reverse
+  end
+
+  def react_posts
+    @react_application = true
+    @posts = Post.all.reverse
+  end
+
   # GET /posts/1 or /posts/1.json
   def show
   end

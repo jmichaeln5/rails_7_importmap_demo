@@ -1,8 +1,19 @@
+<script type="text/javascript">
+  let posts = <%= @posts.to_json.html_safe %>;
+  let postsLength = <%= @posts.size %>
+</script>
+
 <% content_for :head do %>
-  <%= javascript_import_module_tag "vue_components/third_vue_component" %>
+  <%= javascript_import_module_tag "vue_components/vue_posts" %>
 <% end %>
 
 <div id="app-3">
+
+  <h1 class="text-emerald-500 font-bold text-4xl">
+    Vue Posts
+  </h1>
+
+
 <template>
   <ul role="list" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
     <li v-for="post in posts" :key="post.email" class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200">
@@ -24,9 +35,6 @@
               {{post.post_url}}
             </div>
           </div>
-
-
-
 
           <div class="w-0 flex-1 flex">
             <div class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500">
