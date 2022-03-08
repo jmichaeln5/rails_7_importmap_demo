@@ -1,32 +1,87 @@
+// Before HTM Conversion
+// Before HTM Conversion
+// Before HTM Conversion
+
+// class Clock extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {date: new Date()};
+//   }
+//
+//   componentDidMount() {
+//     this.timerID = setInterval(
+//       () => this.tick(),
+//       1000
+//     );
+//   }
+//
+//   componentWillUnmount() {
+//     clearInterval(this.timerID);
+//   }
+//
+//   tick() {
+//     this.setState({
+//       date: new Date()
+//     });
+//   }
+//
+//   render() {
+//     return (
+//       <div>
+//         <h1>Hello, world!</h1>
+//         <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+//       </div>
+//     );
+//   }
+// }
+//
+// ReactDOM.render(
+//   <Clock />,
+//   document.getElementById('secondReactComponent')
+// );
+
+
+// After HTM Conversion
+// After HTM Conversion
+// After HTM Conversion
+
 import { html, Component, render } from 'https://unpkg.com/htm/preact/standalone.module.js';
 
-class App extends Component {
-  addTodo() {
-    const { todos = [] } = this.state;
-    this.setState({ todos: todos.concat(`Item ${todos.length}`) });
+
+class Clock extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {date: new Date()};
   }
-  render({ page }, { todos = [] }) {
+
+  componentDidMount() {
+    this.timerID = setInterval(
+      () => this.tick(),
+      1000
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
+  tick() {
+    this.setState({
+      date: new Date()
+    });
+  }
+
+  render() {
     return html`
-      <div class="app">
-        <${Header} name="ToDo's (${page})" />
-        <ul>
-          ${todos.map(todo => html`
-            <li key=${todo}>${todo}</li>
-          `)}
-        </ul>
-        <button onClick=${() => this.addTodo()}>Add Todo</button>
-        <${Footer}>footer content here<//>
+      <div>
+        <h1>Hello, world!</h1>
+        <h2>It is ${this.state.date.toLocaleTimeString()}.</h2>
       </div>
-    `;
+    `
   }
 }
 
-const Header = ({ name }) => html`<h1>${name} List</h1>`
-
-const Footer = props => html`<footer ...${props} />`
-
 render(
-  html`<${App} page="All" />`,
-  document.getElementById('reactToDo')
-  // document.body
+  html`<${Clock} />`,
+  document.getElementById('secondReactComponent')
 );

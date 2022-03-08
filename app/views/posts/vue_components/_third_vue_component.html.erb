@@ -1,27 +1,42 @@
 <% content_for :head do %>
-  <script type="text/javascript">
-  let posts = <%= @posts.to_json.html_safe %>;
-  </script>
   <%= javascript_import_module_tag "vue_components/third_vue_component" %>
 <% end %>
 
-<div class="p-4">
-  <div class="border">
-    <div class="p-2">
-      <div class="text-grey-600">
-        <h1 class="font-semi-bold text-3xl border-b">
-          Third Vue - for loop through todos
-        </h1>
-        <div id="app-3" class="py-4 text-2xl mt-2">
-          <ol>
-            <li v-for="post in posts">
-              <span class="text-2xl">
-                {{ post }}
-              </span>
-            </li>
-          </ol>
+<div id="app-3">
+<template>
+  <ul role="list" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <li v-for="post in posts" :key="post.email" class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200">
+      <div class="w-full flex items-center justify-between p-6 space-x-6">
+        <div class="flex-1 truncate">
+          <div class="flex items-center space-x-3">
+            <h3 class="text-gray-900 text-sm font-medium truncate">{{ post.title }}</h3>
+          </div>
+          <p class="mt-1 text-gray-500 text-sm truncate">{{ post.body }}</p>
         </div>
       </div>
-    </div>
-  </div>
+      <div>
+        <div class="-mt-px flex divide-x divide-gray-200">
+
+          <div class="w-0 flex-1 flex">
+            <div class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500">
+              <!-- <span class="ml-3">View</span> -->
+              {{post.created_at}}
+              {{post.post_url}}
+            </div>
+          </div>
+
+
+
+
+          <div class="w-0 flex-1 flex">
+            <div class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500">
+              <span class="ml-3">View</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </li>
+  </ul>
+</template>
 </div>

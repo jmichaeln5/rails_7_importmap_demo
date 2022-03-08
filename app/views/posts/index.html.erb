@@ -1,3 +1,9 @@
+<script type="text/javascript">
+let posts = <%= @posts.to_json.html_safe %>;
+let postsLength = <%= @posts.size %>
+</script>
+
+
 <% if vue_application? %>
   <div class="w-full">
     <%= render "posts/vue_components/first_vue_component"%>
@@ -10,9 +16,11 @@
   <div class="w-full">
     <%= render "posts/react_components/first_react_component"%>
     <%= render "posts/react_components/second_react_component"%>
+    <%= render "posts/react_components/third_react_component"%>
   </div>
 <% end %>
 
+<% if (react_application? == false ) and (vue_application? == false ) %>
 <div class="w-full">
   <% if notice.present? %>
     <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
@@ -27,3 +35,4 @@
     <%= render @posts %>
   </div>
 </div>
+<% end %>
