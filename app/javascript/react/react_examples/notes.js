@@ -4,21 +4,21 @@ function Welcome(props) {
 }
 
 // Class Component
-class Welcome extends React.Component {
-  render() {
-    return <h1>Hello, {this.props.name}</h1>;
-  }
-}
-
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-
-// Previously, we only encountered React elements that represent DOM tags:
-const element = <div />;
-
-// Now elements can also represent user-defined components:
-const element = <Welcome name="Sara" />;
-
+// class Welcome extends React.Component {
+//   render() {
+//     return <h1>Hello, {this.props.name}</h1>;
+//   }
+// }
+//
+// ////////////////////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////////////////////
+//
+// // Previously, we only encountered React elements that represent DOM tags:
+// const element = <div />;
+//
+// // Now elements can also represent user-defined components:
+// const element = <Welcome name="Sara" />;
+//
 
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
@@ -32,15 +32,15 @@ const element = <Welcome name="Sara" />;
 // When React sees an element representing a user-defined component, it passes JSX attributes and children to this component as a single object. We call this object “props”.
 
 // For example, this code renders “Hello, Sara” on the page:
-function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>;
-}
-
-const element = <Welcome name="Sara" />;
-ReactDOM.render(
-  element,
-  document.getElementById('root')
-);
+// function Welcome(props) {
+//   return <h1>Hello, {props.name}</h1>;
+// }
+//
+// const element = <Welcome name="Sara" />;
+// ReactDOM.render(
+//   element,
+//   document.getElementById('root')
+// );
 
 
 ////////////////////////////////////////////////////////////////////////
