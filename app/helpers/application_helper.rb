@@ -12,7 +12,7 @@ module ApplicationHelper
 
   def vue_application?
     return true if (@vue_application == true)
-    return false if (@vue_application == true)
+    return false if (@react_application == true)
     return false
   end
 
