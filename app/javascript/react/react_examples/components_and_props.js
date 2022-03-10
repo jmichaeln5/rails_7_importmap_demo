@@ -30,7 +30,6 @@ import h from "react_components/htm_create_element"
 // // For example, this code renders “Hello, Sara” on the page:
 
 ////////////////////////// Before HTM Conversion (JSX)
-
 // function Welcome(props) {
 //   return <h1>Hello, {props.name}</h1>;
 // }
@@ -40,7 +39,6 @@ import h from "react_components/htm_create_element"
 //   element,
 //   document.getElementById('root')
 // );
-
 
 ////////////////////////// After HTM Conversion
 //

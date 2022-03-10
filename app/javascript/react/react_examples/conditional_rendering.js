@@ -1,8 +1,4 @@
 //////////// https://reactjs.org/docs/conditional-rendering.html
-//////////// https://reactjs.org/docs/conditional-rendering.html
-//////////// https://reactjs.org/docs/conditional-rendering.html
-
-
 console.log("conditional_rendering.js loaded...");
 
 import { Component } from "react"
@@ -39,7 +35,11 @@ import h from "react_components/htm_create_element"
 // // function GuestGreeting(props) {
 // //   return <h1>Please sign up.</h1>;
 // // }
-// //
+// //                   //  // SECTION END
+// //                   //  // SECTION END
+// //                   //  // SECTION END
+
+
 // // We’ll create a Greeting component that displays either of these components depending on whether a user is logged in:
 
 // ////////////////////////// Before HTM Conversion (JSX)
@@ -118,8 +118,6 @@ import h from "react_components/htm_create_element"
 // //                   //  // SECTION END
 // //                   //  // SECTION END
 // //                   //  // SECTION END
-// //                   //  // SECTION END
-
 
 // In the example below, we will create a stateful component called LoginControl.
 //
@@ -373,7 +371,6 @@ render(
 // //     </div>
 // //   );
 // // }
-
 // //                   //  // SECTION END
 // //                   //  // SECTION END
 // //                   //  // SECTION END
@@ -439,7 +436,6 @@ render(
 // //   document.getElementById('conditionalRenderingRoot3')
 // // );
 
-
 // ////////////////////////// After HTM Conversion (JSX)
 function WarningBanner(props) {
   if (!props.warn) {
@@ -486,12 +482,3 @@ render(
 )
 
 //// Returning null from a component’s render method does not affect the firing of the component’s lifecycle methods. For instance componentDidUpdate will still be called.
-
-
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-//////////////      /////////////////
-//////////////      /////////////////
-//////////////      /////////////////
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
