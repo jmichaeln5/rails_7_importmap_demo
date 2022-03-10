@@ -25,9 +25,6 @@ import h from "react_components/htm_create_element"
 // // Consider these two components:
 // //
 // //                   //  // SECTION DOES NOT WORK ALONE (Multi step example)
-// //                   //  // SECTION DOES NOT WORK ALONE (Multi step example)
-// //                   //  // SECTION DOES NOT WORK ALONE (Multi step example)
-// //                   //  // SECTION DOES NOT WORK ALONE (Multi step example)
 // // function UserGreeting(props) {
 // //   return <h1>Welcome back!</h1>;
 // // }
@@ -36,9 +33,6 @@ import h from "react_components/htm_create_element"
 // //   return <h1>Please sign up.</h1>;
 // // }
 // //                   //  // SECTION END
-// //                   //  // SECTION END
-// //                   //  // SECTION END
-
 
 // // We’ll create a Greeting component that displays either of these components depending on whether a user is logged in:
 
@@ -96,10 +90,6 @@ import h from "react_components/htm_create_element"
 // Consider these two new components representing Logout and Login buttons:
 
 // //                   //  // SECTION DOES NOT WORK ALONE (Multi step example)
-// //                   //  // SECTION DOES NOT WORK ALONE (Multi step example)
-// //                   //  // SECTION DOES NOT WORK ALONE (Multi step example)
-// //                   //  // SECTION DOES NOT WORK ALONE (Multi step example)
-
 // function LoginButton(props) {
 //   return (
 //     <button onClick={props.onClick}>
@@ -115,8 +105,6 @@ import h from "react_components/htm_create_element"
 //     </button>
 //   );
 // }
-// //                   //  // SECTION END
-// //                   //  // SECTION END
 // //                   //  // SECTION END
 
 // In the example below, we will create a stateful component called LoginControl.
@@ -268,7 +256,6 @@ render(
   document.getElementById('conditionalRenderingRoot')
 );
 
-
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 //////////////   Inline If with Logical && Operator   /////////////////
@@ -321,7 +308,6 @@ render(
   document.getElementById('conditionalRenderingRoot2')
 )
 
-
 //// It works because in JavaScript, true && expression always evaluates to expression, and false && expression always evaluates to false.
 ////
 //// Therefore, if the condition is true, the element right after && will appear in the output. If it is false, React will ignore and skip it.
@@ -329,7 +315,6 @@ render(
 //// Note that returning a falsy expression will still cause the element after && to be skipped but will return the falsy expression.
 
 ////   <div>0</div>
-
 
 
 ////////////////////////////////////////////////////////////////////////
@@ -345,10 +330,6 @@ render(
 //// In the example below, we use it to conditionally render a small block of text.
 
 // //                   //  // SECTION DOES NOT WORK ALONE (Multi step example)
-// //                   //  // SECTION DOES NOT WORK ALONE (Multi step example)
-// //                   //  // SECTION DOES NOT WORK ALONE (Multi step example)
-// //                   //  // SECTION DOES NOT WORK ALONE (Multi step example)
-
 // // render() {
 // //   const isLoggedIn = this.state.isLoggedIn;
 // //   return (
@@ -371,9 +352,6 @@ render(
 // //     </div>
 // //   );
 // // }
-// //                   //  // SECTION END
-// //                   //  // SECTION END
-// //                   //  // SECTION END
 // //                   //  // SECTION END
 
 // // Just like in JavaScript, it is up to you to choose an appropriate style based on what you and your team consider more readable.
