@@ -1,6 +1,4 @@
 //////////// https://reactjs.org/docs/state-and-lifecycle.html
-//////////// https://reactjs.org/docs/state-and-lifecycle.html
-//////////// https://reactjs.org/docs/state-and-lifecycle.html
 
 console.log("state_and_lifecycle.js loaded...");
 
