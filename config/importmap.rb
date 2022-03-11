@@ -29,12 +29,8 @@ pin "react_components/second_react_component"
 pin "react_components/third_react_component"
 pin "react_components/react_posts"
 
-################ React Examples
-### Example of pinning all files from a directory with a namespace
+################ React Docs
+### Example of pinning all files from a directory under a namespace
 pin_all_from "app/javascript/react", under: "react"
 pin_all_from "app/javascript/react/react_docs", under: "react_docs"
-
-# pin "react_examples/props"
-# pin "react_examples/state_and_lifecycle"
-
 ################
