@@ -20,7 +20,7 @@
 console.log("components_and_props.js loaded...");
 
 import { render } from "react-dom"
-import h from "react_components/htm_create_element"
+import h from "react/htm_create_element"
 
 // // When React sees an element representing a user-defined component, it passes JSX attributes and children to this component as a single object. We call this object “props”.
 

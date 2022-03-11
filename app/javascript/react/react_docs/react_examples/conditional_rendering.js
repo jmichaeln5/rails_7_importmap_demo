@@ -3,7 +3,7 @@ console.log("conditional_rendering.js loaded...");
 
 import { Component } from "react"
 import { render } from "react-dom"
-import h from "react_components/htm_create_element"
+import h from "react/htm_create_element"
 
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////

@@ -4,7 +4,7 @@ console.log("state_and_lifecycle.js loaded...");
 
 import { Component } from "react"
 import { render } from "react-dom"
-import h from "react_components/htm_create_element"
+import h from "react/htm_create_element"
 
 // Consider the ticking clock example from one of the previous sections.
 
