@@ -5,13 +5,15 @@
 
   <p>Find me in app/views/react/index.html.erb</p>
 
-  <%= render partial: "react/react_examples/components_and_props", locals: { module_tag_path: "react/react_examples/components_and_props"} %>
+  <%= react_docs_base_path = "react/react_examples/" %>
+  
+  <%= render partial: "#{react_docs_base_path}components_and_props", locals: { module_tag_path: "#{react_docs_base_path}components_and_props"} %>
 
-  <%= render partial: "react/react_examples/state_and_lifecycle", locals: { module_tag_path: "react/react_examples/state_and_lifecycle"} %>
+  <%= render partial: "#{react_docs_base_path}state_and_lifecycle", locals: { module_tag_path: "#{react_docs_base_path}state_and_lifecycle"} %>
 
-  <%= render partial: "react/react_examples/handling_events", locals: { module_tag_path: "react/react_examples/handling_events"} %>
+  <%= render partial: "#{react_docs_base_path}handling_events", locals: { module_tag_path: "#{react_docs_base_path}handling_events"} %>
 
-  <%= render partial: "react/react_examples/conditional_rendering", locals: { module_tag_path: "react/react_examples/conditional_rendering"} %>
+  <%= render partial: "#{react_docs_base_path}conditional_rendering", locals: { module_tag_path: "#{react_docs_base_path}conditional_rendering"} %>
 
-  <%= render partial: "react/react_examples/lists_and_keys", locals: { module_tag_path: "react/react_examples/lists_and_keys"} %>
+  <%= render partial: "#{react_docs_base_path}lists_and_keys", locals: { module_tag_path: "#{react_docs_base_path}lists_and_keys"} %>
 </div>

@@ -32,6 +32,7 @@ pin "react_components/react_posts"
 ################ React Examples
 ### Example of pinning all files from a directory with a namespace
 pin_all_from "app/javascript/react", under: "react"
+# pin_all_from "app/javascript/react/react_docs", under: "react_docs"
 
 # pin "react_examples/props"
 # pin "react_examples/state_and_lifecycle"
