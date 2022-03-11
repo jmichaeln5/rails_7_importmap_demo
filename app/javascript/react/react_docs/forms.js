@@ -104,7 +104,7 @@ class NameForm extends Component {
         <label>
           Enter Name and click submit to trigger content an alert()
           <br/>
-          <input type="text" value=${this.state.value} onChange=${this.handleChange} class="block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full"/>
+          <input type="text" value=${this.state.value} onChange=${this.handleChange} class="block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-1/4"/>
         </label>
         <br/>
         <input class="rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" type="submit" value="Submit" />
@@ -206,7 +206,7 @@ class EssayForm extends Component {
           <br/>
           Essay:
           <br/>
-          <textarea value=${this.state.value} onChange=${this.handleChange} class="block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" rows="4"/>
+          <textarea value=${this.state.value} onChange=${this.handleChange} class="block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-1/3" rows="4"/>
         </label>
         <br/>
         <input class="rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" type="submit" value="Submit" />
@@ -316,7 +316,7 @@ class FlavorForm extends Component {
           Pick your favorite flavor:
           <br/>
            Click submit to trigger content as an alert()
-          <select class="block shadow rounded-md border border-gray-200 outline-none px-3 py-2 w-full" value=${this.state.value} onChange=${this.handleChange}>
+          <select class="block shadow rounded-md border border-gray-200 outline-none px-3 py-2 w-1/4" value=${this.state.value} onChange=${this.handleChange}>
             <option value="grapefruit">Grapefruit</option>
             <option value="lime">Lime</option>
             <option value="coconut">Coconut</option>
